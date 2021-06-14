@@ -1,0 +1,43 @@
+{
+  "name": "rncbook",
+  "version": "1.0.0",
+  "description": "Api de consulta registros RNC en RD",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build && node build/index",
+    "start:dev": "nodemon --exec babel-node src/index",
+    "build": "npm run clean && npm run build-babel",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjwebdevelopments/rncbook-ApiRest.git"
+  },
+  "keywords": [
+    "rnc",
+    "buscar-rnc",
+    "rd-rnc"
+  ],
+  "author": "wjwebdevelopments",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wjwebdevelopments/rncbook-ApiRest/issues"
+  },
+  "homepage": "https://github.com/wjwebdevelopments/rncbook-ApiRest#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.5",
+    "@babel/node": "^7.14.5",
+    "@babel/plugin-transform-runtime": "^7.14.5",
+    "@babel/polyfill": "^7.12.1",
+    "@babel/preset-env": "^7.14.5",
+    "@babel/runtime": "^7.14.5",
+    "nodemon": "^2.0.7"
+  }
+}
